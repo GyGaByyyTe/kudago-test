@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { EventsList } from '../../components/EventsList/EventsList'
-import { getEvents } from '../../actions/eventsActions'
+import { getEvents, changeFavorites } from '../../actions/eventsActions'
 
 class MainEvents extends Component {
   componentDidMount() {
@@ -9,7 +9,13 @@ class MainEvents extends Component {
     getEvents()
   }
   render() {
-    const { events, isLoading, filterType, sortPrice } = this.props
+    const {
+      events,
+      isLoading,
+      filterType,
+      sortPrice,
+      changeFavorites,
+    } = this.props
     return (
       <div className="MainEvents">
         <div className="Container">
@@ -20,6 +26,7 @@ class MainEvents extends Component {
               data={events}
               filterType={filterType}
               sortPrice={sortPrice}
+              changeFavorite={changeFavorites}
             />
           )}
         </div>
@@ -36,6 +43,7 @@ const mapStateToProps = store => ({
 
 const mapDispatchToProps = dispatch => ({
   getEvents: () => dispatch(getEvents()),
+  changeFavorites: index => dispatch(changeFavorites(index)),
 })
 
 export default connect(

@@ -3,6 +3,7 @@ import {
   GET_EVENTS_SUCCESS,
   SORT_PRICE,
   FILTER_TYPE,
+  CHANGE_FAVORITE,
 } from '../actions/eventsActions'
 
 export const initalState = {
@@ -29,6 +30,17 @@ export function rootReducer(state = initalState, action) {
 
     case FILTER_TYPE:
       return { ...state, filterType: action.payload }
+
+    case CHANGE_FAVORITE:
+      console.log(action.payload)
+      return {
+        ...state,
+        events: state.events.map((item, index) => {
+          return index === action.payload
+            ? { ...item, favorites: !item.favorites }
+            : { ...item, favorites: item.favorites }
+        }),
+      }
 
     default:
       return state

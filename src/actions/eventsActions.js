@@ -2,6 +2,7 @@ export const GET_EVENTS_REQUEST = 'GET_EVENTS_REQUEST'
 export const GET_EVENTS_SUCCESS = 'GET_EVENTS_SUCCESS'
 export const SORT_PRICE = 'SORT_PRICE'
 export const FILTER_TYPE = 'FILTER_TYPE'
+export const CHANGE_FAVORITE = 'ADD_FAVORITE'
 export function getEvents() {
   return dispatch => {
     dispatch({
@@ -65,5 +66,11 @@ export function filterByType(type) {
   return {
     type: FILTER_TYPE,
     payload: type,
+  }
+}
+export function changeFavorites(index) {
+  return {
+    type: CHANGE_FAVORITE,
+    payload: index,
   }
 }

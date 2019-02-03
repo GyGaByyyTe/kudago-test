@@ -10,6 +10,7 @@ export function getEvents() {
       payload: true,
     })
 
+    //тут мог бы быть ваш fetch()
     setTimeout(() => {
       dispatch({
         type: GET_EVENTS_SUCCESS,
@@ -29,25 +30,25 @@ export function getEvents() {
           {
             title: 'Концерт 1',
             description: 'Описание концерта здесь',
-            price: 300,
+            price: 2500,
             type: 'concert',
           },
           {
             title: 'Выставка 1',
             description: 'Описание выставки здесь',
-            price: 200,
+            price: 600,
             type: 'exhibition',
           },
           {
             title: 'Концерт 2',
             description: 'Описание концерта здесь',
-            price: 300,
+            price: 100,
             type: 'concert',
           },
           {
             title: 'Выставка 2',
             description: 'Описание выставки здесь',
-            price: 200,
+            price: 1200,
             type: 'exhibition',
           },
         ],

@@ -21,7 +21,11 @@ export function rootReducer(state = initalState, action) {
     case GET_EVENTS_SUCCESS:
       return {
         ...state,
-        events: action.payload.map(item => ({ ...item, favorites: false })),
+        events: action.payload.map((item, index) => ({
+          ...item,
+          favorites: false,
+          id: index,
+        })),
         isLoading: false,
       }
 
@@ -32,7 +36,6 @@ export function rootReducer(state = initalState, action) {
       return { ...state, filterType: action.payload }
 
     case CHANGE_FAVORITE:
-      console.log(action.payload)
       return {
         ...state,
         events: state.events.map((item, index) => {

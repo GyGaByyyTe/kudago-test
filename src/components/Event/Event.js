@@ -4,7 +4,7 @@ import './Event.css'
 
 export class Event extends React.Component {
   render() {
-    const { data, className, onClick, changeFavorite } = this.props
+    const { data, className, onClick, changeFavorites } = this.props
     return (
       <div className={'Event ' + className} onClick={onClick}>
         <h3 className="Event-Title">{data.title}</h3>
@@ -13,7 +13,7 @@ export class Event extends React.Component {
           className={`Event-Favorite Event-Favorite--${data.favorites}`}
           onClick={e => {
             e.stopPropagation()
-            changeFavorite(e)
+            changeFavorites(e)
           }}
         />
         <span className="Event-Price">Цена билета: {data.price}</span>

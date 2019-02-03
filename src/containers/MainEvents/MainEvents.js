@@ -29,7 +29,7 @@ class MainEvents extends Component {
               data={events}
               filterType={filterType}
               sortPrice={sortPrice}
-              changeFavorite={changeFavorites}
+              changeFavorites={changeFavorites}
             />
           )}
         </div>

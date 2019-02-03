@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { EventsList } from '../../components/EventsList/EventsList'
-
+import { changeFavorites } from '../../actions/eventsActions'
 class FavoritesEvents extends Component {
   render() {
-    const { events, filterType, sortPrice } = this.props
+    const { events, filterType, sortPrice, changeFavorites } = this.props
     let favorites = events.filter(item => item.favorites)
     return (
       <div className="FavoritesEvents">
@@ -13,6 +13,7 @@ class FavoritesEvents extends Component {
             data={favorites}
             filterType={filterType}
             sortPrice={sortPrice}
+            changeFavorites={changeFavorites}
           />
         </div>
       </div>
@@ -24,5 +25,10 @@ const mapStateToProps = store => ({
   filterType: store.filterType,
   sortPrice: store.sortPrice,
 })
-
-export default connect(mapStateToProps)(FavoritesEvents)
+const mapDispatchToProps = dispatch => ({
+  changeFavorites: index => dispatch(changeFavorites(index)),
+})
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FavoritesEvents)

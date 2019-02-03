@@ -1,6 +1,5 @@
 import { createStore, applyMiddleware } from 'redux'
 import { rootReducer } from '../reducers'
-import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 
 const saveState = state => {
@@ -22,11 +21,7 @@ const loadState = () => {
 }
 
 const oldState = loadState()
-export const store = createStore(
-  rootReducer,
-  oldState,
-  applyMiddleware(thunk, logger)
-)
+export const store = createStore(rootReducer, oldState, applyMiddleware(thunk))
 
 store.subscribe(() => {
   saveState(store.getState())

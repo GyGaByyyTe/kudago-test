@@ -3,12 +3,12 @@ import { Event } from '../Event/Event'
 import { Info } from '../Info/Info'
 
 export class EventsList extends React.Component {
-  state = { infoCard: false, index: null }
-  toggleInfo = index => {
+  state = { infoCard: false, id: null }
+  toggleInfo = id => {
     const { infoCard } = this.state
     this.setState(state => ({
       infoCard: !infoCard,
-      index: index,
+      id: id,
     }))
   }
   filter = arr => {
@@ -38,22 +38,22 @@ export class EventsList extends React.Component {
     }
   }
   renderList = () => {
-    const { data, changeFavorite } = this.props
+    const { data, changeFavorites } = this.props
     let template = ''
     let self = this
     if (data.length) {
-      template = this.sort(this.filter(data)).map(function(item, index) {
+      template = this.sort(this.filter(data)).map(function(item) {
         return (
           <Event
             className="EventList-Item"
-            key={index}
+            key={item.id}
             data={item}
             onClick={() => {
-              self.toggleInfo(index)
+              self.toggleInfo(item.id)
             }}
-            changeFavorite={e => {
-              if (changeFavorite) {
-                changeFavorite(index)
+            changeFavorites={e => {
+              if (changeFavorites) {
+                changeFavorites(item.id)
               }
             }}
           />
@@ -67,20 +67,20 @@ export class EventsList extends React.Component {
   }
 
   render() {
-    const { data, changeFavorite } = this.props
-    const { index } = this.state
+    const { data, changeFavorites } = this.props
+    const { id } = this.state
     return (
       <div className="EventList">
         {this.renderList()}
         {this.state.infoCard ? (
           <Info
-            data={data[index]}
+            data={data[id]}
             onClick={() => {
               this.toggleInfo(0)
             }}
-            changeFavorite={e => {
-              if (changeFavorite) {
-                changeFavorite(index)
+            changeFavorites={e => {
+              if (changeFavorites) {
+                changeFavorites(id)
               }
             }}
           />

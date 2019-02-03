@@ -6,7 +6,12 @@ import './Filters.css'
 
 class Filters extends Component {
   render() {
-    const { sortPriceAction, filterByTypeAction } = this.props
+    const {
+      sortPrice,
+      filterType,
+      sortPriceAction,
+      filterByTypeAction,
+    } = this.props
     return (
       <div className="Filters Container">
         <div className="Filters-Row">
@@ -16,6 +21,7 @@ class Filters extends Component {
             onChange={e => {
               sortPriceAction(e.target.value)
             }}
+            value={sortPrice}
           >
             <option value="NONE">Без сортировки</option>
             <option value="UP">&darr; По убыванию </option>
@@ -29,6 +35,7 @@ class Filters extends Component {
             onChange={e => {
               filterByTypeAction(e.target.value)
             }}
+            value={filterType}
           >
             <option value="NONE">Все типы</option>
             <option value="concert">Концерт</option>

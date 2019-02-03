@@ -1,13 +1,13 @@
 {
-  "main.css": "/kudago-test/static/css/main.bc46b41a.chunk.css",
-  "main.js": "/kudago-test/static/js/main.1223ad71.chunk.js",
-  "main.js.map": "/kudago-test/static/js/main.1223ad71.chunk.js.map",
-  "static/js/1.1c4985e5.chunk.js": "/kudago-test/static/js/1.1c4985e5.chunk.js",
-  "static/js/1.1c4985e5.chunk.js.map": "/kudago-test/static/js/1.1c4985e5.chunk.js.map",
+  "main.css": "/kudago-test/static/css/main.d22b3dee.chunk.css",
+  "main.js": "/kudago-test/static/js/main.fc230694.chunk.js",
+  "main.js.map": "/kudago-test/static/js/main.fc230694.chunk.js.map",
+  "static/js/1.75d0b6d4.chunk.js": "/kudago-test/static/js/1.75d0b6d4.chunk.js",
+  "static/js/1.75d0b6d4.chunk.js.map": "/kudago-test/static/js/1.75d0b6d4.chunk.js.map",
   "runtime~main.js": "/kudago-test/static/js/runtime~main.5ba65588.js",
   "runtime~main.js.map": "/kudago-test/static/js/runtime~main.5ba65588.js.map",
-  "static/css/main.bc46b41a.chunk.css.map": "/kudago-test/static/css/main.bc46b41a.chunk.css.map",
+  "static/css/main.d22b3dee.chunk.css.map": "/kudago-test/static/css/main.d22b3dee.chunk.css.map",
   "index.html": "/kudago-test/index.html",
-  "precache-manifest.e530baf18a2d26f43e2d423b4adc225e.js": "/kudago-test/precache-manifest.e530baf18a2d26f43e2d423b4adc225e.js",
+  "precache-manifest.780d92c889198c9716926d4681557c0c.js": "/kudago-test/precache-manifest.780d92c889198c9716926d4681557c0c.js",
   "service-worker.js": "/kudago-test/service-worker.js"
 }

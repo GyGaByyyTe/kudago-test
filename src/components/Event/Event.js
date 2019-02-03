@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import './Event.css'
+
 export class Event extends React.Component {
   render() {
     const { data, className, onClick, changeFavorite } = this.props

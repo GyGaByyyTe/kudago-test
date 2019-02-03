@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { sortPrice, filterByType } from '../../actions/eventsActions'
 
+import './Filters.css'
+
 class Filters extends Component {
   render() {
     const { sortPriceAction, filterByTypeAction } = this.props

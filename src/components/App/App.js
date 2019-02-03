@@ -4,6 +4,8 @@ import MainEvents from '../../containers/MainEvents/MainEvents'
 import FavoritesEvents from '../../containers/FavoritesEvents/FavoritesEvents'
 import Filters from '../../containers/Filters/Filters'
 
+import './App.css'
+
 export class App extends Component {
   render() {
     return (

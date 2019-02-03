@@ -1,0 +1,12 @@
+.Filters {
+  margin: 1rem auto;
+}
+.Filters-Label{
+  margin-right: 1rem;
+}
+.Filters-Select {
+  width: 50%;
+}
+.Filters-Row {
+  margin-bottom: 1rem;
+}

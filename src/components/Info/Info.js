@@ -1,6 +1,8 @@
 import React from 'react'
 import { createPortal } from 'react-dom'
 
+import './Info.css'
+
 export class Info extends React.Component {
   render() {
     const { data, onClick, changeFavorite } = this.props

@@ -3,10 +3,12 @@ import { connect } from 'react-redux'
 import { EventsList } from '../../components/EventsList/EventsList'
 import { getEvents, changeFavorites } from '../../actions/eventsActions'
 
+import './MainEvents.css'
+
 class MainEvents extends Component {
   componentDidMount() {
     const { getEvents } = this.props
-    getEvents()
+    if (!window.localStorage.getItem('app_state')) getEvents()
   }
   render() {
     const {
@@ -15,6 +17,7 @@ class MainEvents extends Component {
       filterType,
       sortPrice,
       changeFavorites,
+      getEvents,
     } = this.props
     return (
       <div className="MainEvents">
@@ -30,6 +33,9 @@ class MainEvents extends Component {
             />
           )}
         </div>
+        <button className="MainEvents-Refresh" onClick={getEvents}>
+          Обновить данные
+        </button>
       </div>
     )
   }

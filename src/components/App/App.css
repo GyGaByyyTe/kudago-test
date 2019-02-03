@@ -1,0 +1,23 @@
+.Tabs {
+    padding: 1rem 1rem 0 1rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+  }
+  .Tabs-Button{
+    display: inline-block;
+    padding: 1rem;
+    border: 1px solid black;
+    border-bottom: none;  
+    border-left: none;
+  }
+  .Tabs-Button--selected{
+    background-color: #ccc;
+  }
+  .Tabs-Button:last-child{
+    border-top-right-radius: 6px;  
+  }
+  .Tabs-Button:first-child{
+    border-left: 1px solid black;
+    border-top-left-radius: 6px;  
+  }

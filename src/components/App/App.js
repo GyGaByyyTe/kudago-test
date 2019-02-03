@@ -7,7 +7,7 @@ import Filters from '../../containers/Filters/Filters'
 export class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/kudago-test">
         <React.Fragment>
           <div className="App">
             <div className="Tabs">

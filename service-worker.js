@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/kudago-test/precache-manifest.780d92c889198c9716926d4681557c0c.js"
+  "/kudago-test/precache-manifest.0c695ca03f6840ae2834b5a5213d156d.js"
 );
 
 workbox.clientsClaim();

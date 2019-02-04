@@ -47,8 +47,8 @@ class Filters extends Component {
   }
 }
 const mapStateToProps = store => ({
-  filterType: store.filterType,
-  sortPrice: store.sortPrice,
+  filterType: store.list.filterType,
+  sortPrice: store.list.sortPrice,
 })
 
 const mapDispatchToProps = dispatch => ({

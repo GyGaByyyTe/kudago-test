@@ -41,10 +41,10 @@ class MainEvents extends Component {
   }
 }
 const mapStateToProps = store => ({
-  events: store.events,
-  isLoading: store.isLoading,
-  filterType: store.filterType,
-  sortPrice: store.sortPrice,
+  events: store.list.events,
+  isLoading: store.list.isLoading,
+  filterType: store.list.filterType,
+  sortPrice: store.list.sortPrice,
 })
 
 const mapDispatchToProps = dispatch => ({

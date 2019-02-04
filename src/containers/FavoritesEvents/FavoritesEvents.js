@@ -21,9 +21,9 @@ class FavoritesEvents extends Component {
   }
 }
 const mapStateToProps = store => ({
-  events: store.events,
-  filterType: store.filterType,
-  sortPrice: store.sortPrice,
+  events: store.list.events,
+  filterType: store.list.filterType,
+  sortPrice: store.list.sortPrice,
 })
 const mapDispatchToProps = dispatch => ({
   changeFavorites: index => dispatch(changeFavorites(index)),

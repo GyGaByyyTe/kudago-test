@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { BrowserRouter, Link, Route } from 'react-router-dom'
 import MainEvents from '../../containers/MainEvents/MainEvents'
 import FavoritesEvents from '../../containers/FavoritesEvents/FavoritesEvents'
 import Filters from '../../containers/Filters/Filters'
+import { changeTab } from '../../actions/pageActions'
 
 import './App.css'
 
-export class App extends Component {
-  state = { tab: 'MAIN' }
+class App extends Component {
   changeTab = newtab => {
-    this.setState(state => ({
-      tab: newtab,
-    }))
+    const { changeTabAction } = this.props
+    changeTabAction(newtab)
   }
   render() {
-    const { tab } = this.state
+    const { tab } = this.props
     return (
       <BrowserRouter basename="/kudago-test">
         <React.Fragment>
@@ -52,3 +52,16 @@ export class App extends Component {
     )
   }
 }
+
+const mapStateToProps = store => ({
+  tab: store.page.tab,
+})
+
+const mapDispatchToProps = dispatch => ({
+  changeTabAction: newtab => dispatch(changeTab(newtab)),
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)
